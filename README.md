@@ -24,56 +24,67 @@ pip install KangRollGeneCancer
 Below is a quick example to demonstrate the basic functionality of KangRollGeneCancer:
 
 ```python
-import KangRollGeneCancer as krgc
+from sa004package.kangroll_basic_fn001_mln_com_release import fn010_translp  
+# Initialize and run your analysis 
+            H3_ini_test = np.array([row['H3_value_1'], row['H3_value_2'], row['H3_value_3'], row['H3_value_4']])
+            lay1_iterations_test = int(row['lay1_iterations'])
+            lay2_iterations_test = int(row['lay2_iterations'])
 
-# Initialize and run your analysis
-result = krgc.analyze_gene_dynamics(gene_data)
-print(result)
+            MLN_output, NL_final = fn010_translp(v1_test, v2_test, u_ini_test, H3_ini_test, lay1_iterations_test, lay2_iterations_test, debug_mode=False, test_random=True)
+            u_ini_test = MLN_output[-1]
+            total_MLN_output.extend(MLN_output)
+
 ```
 
 For more detailed usage examples, please refer to our test scripts in the repository.
 
 ## Features
 
-- Analysis of relationships between 183 genes and 19 cancer types.
-- Capabilities for integration with EHR systems.
+- Analysis of relationships between 183 genes and 19 cancer types. (test not upload)
+- Capabilities for integration with EHR systems. (test not upload)
 - Tools for simulating and analyzing multi-layer network outputs.
 
 ## Documentation
 
-Detailed documentation can be found at [link-to-your-documentation].
+Detailed documentation can be found at https://www.linkedin.com/in/xiaowenkang/
 
-## Contributing
-
-We welcome contributions to KangRollGeneCancer. To contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -am 'Add some feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Submit a Pull Request.
 
 ## License
 
-This project is licensed under [Your License Name]. See the LICENSE file for more details.
+This project is licensed under Xiaowen Kang See the LICENSE file for more details.
 
 ## Acknowledgments
 
-- Special thanks to Professor Philip for inspiration and guidance.
-- Gratitude to all contributors and researchers in this field.
+1.  Dietlein F, Wang AB, Fagre C, Tang A, Besselink NJM, Cuppen E, Li C, Sunyaev SR, Neal JT, Van Allen EM. Genome-wide analysis of somatic noncoding mutation patterns in cancer. Science 376, eabg5601 (2022). PMID: 35389777; PMCID: PMC9092060 doi:10.1126/science.abg5601
 
----
 
-For the LinkedIn post:
 
----
+## Environment Setup and Testing with Bash Script
 
-**New Python Package for Cancer Genomics Research: KangRollGeneCancer**
+### Overview
+This section provides detailed instructions on setting up the environment and running a quick test for the KangRollGeneCancer package using a provided bash script.
 
-Excited to announce the launch of KangRollGeneCancer, a groundbreaking Python toolset for analyzing the relationship between genes and cancer dynamics. This innovative package offers insights into 183 genes across 19 cancer types, integrating with EHR for personalized medical solutions. Developed under the expertise of Professor Philip, it marks a significant stride in genetic research for oncology. Explore more: [link-to-your-documentation or GitHub repo].
+### Steps for Setup and Testing
 
-#CancerResearch #Genomics #Python #DataScience
+1. **Environment Setup**
+   - The script starts by creating a Python virtual environment named `tk_kangroll_env`. This isolated environment ensures that the package dependencies do not interfere with other Python projects on your system.
 
----
+2. **Activate Virtual Environment**
+   - Once the virtual environment is created, the script activates it. You will notice that the command prompt will change to indicate that `tk_kangroll_env` is currently active. This step is crucial for the subsequent installation of required packages.
 
-Remember to add the actual links to your GitHub repository and documentation in the placeholders provided. This structure should provide a good starting point for both your README.md and LinkedIn post.
+3. **Install Required Packages**
+   - The script will then proceed to install all necessary dependencies for KangRollGeneCancer. Ensure that you have a `requirements.txt` file in the same directory or modify the script to install packages as needed.
+
+4. **Run the Quick Test**
+   - With the environment set up and dependencies installed, the script executes `quicktest.py`. This Python script is designed to perform a quick functionality check of the KangRollGeneCancer package.
+
+5. **Viewing Test Results**
+   - Upon successful execution of the test script, a chart will be displayed for 2 seconds, illustrating the results of the test. Additionally, this chart is saved as a PDF file at `./test_kangroll_basic_fn001_mln_com_result_20231224.pdf`. This file provides a visual representation of the gene-cancer dynamics analyzed during the test.
+
+### Conclusion
+By following these steps, you can easily set up the KangRollGeneCancer environment and perform a quick test to ensure everything is working correctly. This process is designed to be straightforward and user-friendly, even for those who may not be familiar with Python or bash scripting.
+
+
+
+
+
