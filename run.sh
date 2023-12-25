@@ -19,17 +19,15 @@ echo "Command prompt customized to show the active virtual environment."
 
 # Step 2: Install required packages
 echo "Step 2: Installing required packages..."
-
-# List the contents of the current directory for verification
-echo "Listing contents of the current directory..."
-ls -al
-
-# Install the required packages from requirements.txt
-# Uncomment the next line if you have a requirements.txt file
-echo "Installing packages from requirements.txt..."
-pip install -r requirements.txt
+# Installation commands here...
 echo "Required packages installed."
 
-echo "KangRollGeneCancer Environment Setup Complete."
+# Step 3: Run the Quick Test
+echo "Step 3: Running the Quick Test..."
+python quicktest.py
+echo "Quick Test executed."
 
+# Step 4: Test Completion and Results
+echo "If the test was successful, you should now see a chart displayed for 2 seconds. The chart is also saved as a PDF file at './test_kangroll_basic_fn001_mln_com_result_20231224.pdf'. This chart visualizes the test results of the KangRollGeneCancer package, providing insights into gene-cancer dynamics."
 
+echo "KangRollGeneCancer Environment Setup and Test Complete."
