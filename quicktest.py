@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from sa004package.kangroll_basic_fn001_mln_com_release import fn010_translp  # 替换为实际的导入路径
+from sa005package.kangroll_basic_fn001_mln_com_release import fn010_translp  # 替换为实际的导入路径
 
 def read_boundary_conditions(filename):
     return pd.read_csv(filename)

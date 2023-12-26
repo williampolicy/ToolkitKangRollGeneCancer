@@ -24,7 +24,7 @@ pip install KangRollGeneCancer
 Below is a quick example to demonstrate the basic functionality of KangRollGeneCancer:
 
 ```python
-from sa004package.kangroll_basic_fn001_mln_com_release import fn010_translp  
+from sa005package.kangroll_basic_fn001_mln_com_release import fn010_translp  
 # Initialize and run your analysis 
             H3_ini_test = np.array([row['H3_value_1'], row['H3_value_2'], row['H3_value_3'], row['H3_value_4']])
             lay1_iterations_test = int(row['lay1_iterations'])
